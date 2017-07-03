@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 9</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">The best hamburger place</h1>
+        <div class="container">
+            <h3 class="text-center mt-3 mb-4">Make an order</h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-xs-8">
+                    <img class="mr-3" src="images/menu.png" alt="menu">
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="size">Size</label>
+                                <select class="form-control" name="selectSize" id="size">
+                                    <option value="small">Small</option>
+                                    <option value="large">Large</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="stuffing">Stuffing</label>
+                                <select class="form-control" name="selectSize" id="stuffing">
+                                    <option value="cheese">Cheese</option>
+                                    <option value="salad">Salad</option>
+                                    <option value="potato">Potato</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="toppingsCheckboxes" class="ml-3">
+                            <p>Maybe some toppings?</p>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" value="mayo" class="form-check-input">
+                                    Mayo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" value="spice" class="form-check-input">
+                                    Spices
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="button" id="makeOrder" class="btn btn-outline-success offset-md-5">Make an order</button>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <h3 class="text-center mt-3 mb-4">Your hamburgers</h3>
+        <div class="row" id="orderedHamburgers"></div>
+    </div>
+    <div id="modal">
+        <div class="modalContent">
+            <header>
+                <h4>Error has occurred</h4>
+                <span id="closeModal">x</span>
+            </header>
+            <h5 id="modalContent"></h5>
+        </div>
+    </div>
+    <script src="script/jquery-3.2.1.js"></script>
+    <script src="script/Hamburger.js"></script>
+    <script src="script/Geometry.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
